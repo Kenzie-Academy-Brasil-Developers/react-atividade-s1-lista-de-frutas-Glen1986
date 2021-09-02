@@ -1,0 +1,2 @@
+        <Price>{totalPrice}</Price>
+        <ul>
