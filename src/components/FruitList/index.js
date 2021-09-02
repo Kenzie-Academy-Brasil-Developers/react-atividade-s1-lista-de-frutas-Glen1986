@@ -1,6 +1,8 @@
-function FruitList({nombre}){
+ function FruitList({name}){
   return(
-    <li>{nombre}</li>
+    <ul>
+      <li>{name}</li>
+    </ul>
   )
 }
 export default FruitList;

@@ -1,6 +1,6 @@
-function Button(){
+function Button(props){
   return(
-<button>click</button>
+<button onClick = {props.filtro}>click</button>
   )
 }
 export default Button;
