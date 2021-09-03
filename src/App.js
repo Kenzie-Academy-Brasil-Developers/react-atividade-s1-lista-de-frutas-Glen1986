@@ -13,19 +13,31 @@ const [fruits, setFruits] = useState([
      { name: "strawberry", color: "red", price: 4 },
     ]);
 
-const nombre = fruits.map(item=>
-            <li>{item.name}</li>
-           )
-const precio = fruits.map(item=>
-  <div>{item.price} </div>
-)
-
+  const filterRedFruits = () =>{ 
+    setFruits(
+    fruits.filter((item) => {
+    return item.color === "red";
+  }))
+}
   return (
     <div className="App">
       <div className="App-header">
-        <Price precio = {precio}></Price>
-        <FruitList name = {nombre}></FruitList>
-        <Button></Button>
+
+        <Price precio = {
+            fruits.map(item=>
+              item.price
+            ).reduce((a,b)=>{
+        return a + b;
+            })}/>
+
+        <FruitList name = {
+            fruits.map(item=>
+              <li>
+                {item.name}
+              </li>
+  )}/>
+
+        <Button onClick={filterRedFruits}/>
       </div>
     </div>
   );

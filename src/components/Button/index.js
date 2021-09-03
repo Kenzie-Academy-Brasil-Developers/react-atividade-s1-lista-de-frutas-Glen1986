@@ -1,6 +1,7 @@
-function Button(props){
+import './style.css';
+function Button({onClick}){
   return(
-<button onClick = {props.filtro}>click</button>
+<button onClick={onClick}>Red Fruits</button>
   )
 }
 export default Button;
